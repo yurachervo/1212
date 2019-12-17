@@ -19,10 +19,15 @@ jobs:
     - name: print env
       run: echo ${{ env.APP.NAME }}
     
+    - name: git_checkout
+      uses: actions/checkout@v1
+    
     - name: ls
       run: ls -la
-
-             
+    
+    - name: Run a one-line script
+      run: python --version
+    
   build2:
     needs: [build]
     runs-on: ubuntu-latest

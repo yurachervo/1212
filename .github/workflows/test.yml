@@ -17,7 +17,7 @@ jobs:
       run: echo Hello, world!
       
     - name: print env
-      run: echo "${{ env.APP.NAME }}"
+      run: echo ${{ env.APP.NAME }}
 
              
   build2:

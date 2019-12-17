@@ -18,6 +18,9 @@ jobs:
       
     - name: print env
       run: echo ${{ env.APP.NAME }}
+    
+    - name: ls
+      run: ls -la
 
              
   build2:

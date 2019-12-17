@@ -1,4 +1,6 @@
 name: CI-test-action
+env:
+  APP.NAME: "1111"
 
 on: 
   push:
@@ -13,6 +15,11 @@ jobs:
     steps:
     - name: Run a one-line script
       run: echo Hello, world!
+      
+    - name: print env
+      run: 
+          echo "${{env.APP.NAME}}"
+
              
   build2:
     needs: [build]
